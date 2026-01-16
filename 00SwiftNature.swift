@@ -101,19 +101,60 @@ let something44 : String = "A"
 print( something44 )
 //Above something4 And something44 Are Equivalent Of Type String
 
-
 // Explicit Type Specification
 let something5 : Character = "A"
 print( something5 )
 
 // Explicit Type Specification
+// let something6 : Float= 99.99
+ // error: '=' must have consistent whitespace on both sides 
+
 let something6 : Float = 99.99
 print( something6 )
 
 //_______________________________________________________________
-// 1. Swift Is Case Sensitative Language
 //
+// 1. Swift Is Case Sensitative Language
 //_______________________________________________________________
+
+// Experiment Type Conversion Code In Swfit/C/C++/Java/Python
+
+print("\nExplicit Type Conversion")
+
+let label = "The Width is: "
+let width = 88
+// let labelledWidth = label + width
+// error: binary operator '+' cannot be applied to operands of type 'String' and 'Int
+
+// Explicit Type Conversion
+let labelledWidth = label + String( width )
+print( labelledWidth )
+
+
+let someFloatValue : Float = 10.10
+let someDoubleValue : Double = 99.99
+
+// let someValue1 = someFloatValue + someDoubleValue
+//  error: binary operator '+' cannot be applied to operands of type 'Float' and 'Double'
+
+let someValue1 = Double( someFloatValue ) + someDoubleValue 
+print( someValue1 )
+
+let someValue2 = someFloatValue + Float( someDoubleValue )
+print( someValue2 )
+
+let someIntValue1: Int8 	= 100
+let someIntValue2: Int16 	= 99
+
+// let someIntValue = someIntValue1 + someIntValue2 
+// error: binary operator '+' cannot be applied to operands of type 'Int8' and 'Int16
+
+let someIntValue11 = Int16( someIntValue1 ) + someIntValue2 
+print( someIntValue11 )
+
+let someIntValue12 = someIntValue1 + Int8( someIntValue2 )
+print( someIntValue12 )
+
 
 //_______________________________________________________________
 //
